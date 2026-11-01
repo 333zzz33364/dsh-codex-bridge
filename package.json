@@ -1,0 +1,47 @@
+{
+  "name": "dsh-codex-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "DeepSeek Harness 插件：借本机 Codex 的 ChatGPT 订阅身份出图（不需要 API Key），并在设置页显示订阅额度（5 小时 / 每周窗口、重置时间、重置卡）。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "codex",
+    "image-generation",
+    "quota"
+  ],
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": []
+    }
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/333zzz33364/dsh-codex-bridge.git"
+  },
+  "homepage": "https://github.com/333zzz33364/dsh-codex-bridge#readme",
+  "bugs": {
+    "url": "https://github.com/333zzz33364/dsh-codex-bridge/issues"
+  }
+}
